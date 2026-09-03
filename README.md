@@ -1,7 +1,7 @@
-# SC-Series Servo
+# FeeTech SC/ST-series Servo
 
-> SC-Series Servo library for Arduino, ESP32, and Ameba<br>
-> Examples > AmebaSTS (modified from STSCL)<br>
+> SC/ST-Series Servo library for Arduino, ESP32, and Ameba<br>
+> examples > AmebaSTS (modified from STSCL)<br>
 
 ## Table of Contents
 
