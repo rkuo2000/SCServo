@@ -1,6 +1,7 @@
 # SC-Series Servo
 
-> SC-Series Servo library for Arduino and ESP32
+> SC-Series Servo library for Arduino, ESP32, and Ameba
+> Examples > AmebaSTS (modified from STSCL)
 
 ## Table of Contents
 
