@@ -1,0 +1,35 @@
+/*
+Ping the servo to check if it is ready.
+*/
+
+#include <SCServo.h>
+
+SMS_STS sms_sts;
+// the UART used to control servos.
+// GPIO 18 - S_RXD, GPIO 19 - S_TXD, as default.
+
+void setup()
+{
+  Serial.begin(115200);
+  Serial2.begin(1000000, SERIAL_8N1);
+  Serial.println();
+  sms_sts.pSerial = &Serial2;
+  delay(1000);
+
+  // Ping all Servo IDs
+  Serial.println("Listing Servos :"); // Ping all Servo IDs
+  for (int id=0; id<0xFE; id++) { //  id < 0xFE
+    if(sms_sts.Ping(id)!=-1){
+      Serial.print("Servo ID:");
+      Serial.println(id, DEC);
+      delay(100);
+    } else {
+      // Serial.println("Ping servo ID error!");
+      // delay(1000);
+    }
+  }  
+}
+
+void loop()
+{
+}
